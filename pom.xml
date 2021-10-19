@@ -139,6 +139,8 @@
         <maven-source-plugin.version>3.1.0</maven-source-plugin.version>
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
         <java.version>15</java.version>
+        <sonar.organization>00a0faf21a24fa2f4afalkfakolafmalkfmala</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
     <modules>
