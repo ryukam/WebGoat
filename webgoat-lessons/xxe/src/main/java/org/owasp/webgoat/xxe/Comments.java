@@ -92,6 +92,10 @@ public class Comments {
     protected Comment parseXml(String xml, boolean secure) throws JAXBException, XMLStreamException {
         var jc = JAXBContext.newInstance(Comment.class);
         var xif = XMLInputFactory.newInstance();
+        xif.setProperty(XMLInputFactory.SUPPORT_DTD, false);
+        xif.setProperty(XMLInputFactory.IS_SUPPORTING_EXTERNAL_ENTITIES, Boolean.FALSE);
+        xif.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, "");
+        xif.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");
         
         if (secure) {
         	xif.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, ""); // Compliant
